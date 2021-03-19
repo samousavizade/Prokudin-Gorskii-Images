@@ -95,12 +95,15 @@ def min_ssd(image, template, return_value=False):
     return rows, cols
 
 
+offset = 125
+
+
 def main():
-    file_name = ''
-    offset = 125
+    input_file_name = ''
+    output_file_name = ''
 
     # read .tif image
-    input: np.ndarray = tif.imread(file_name)
+    input: np.ndarray = tif.imread(input_file_name)
 
     m = input.max()
     # change type and intensity scale
@@ -167,7 +170,7 @@ def main():
     output[output[:, :, 2] == 0] = 0
 
     print('result saved')
-    pp.imsave('result.png', output)
+    pp.imsave(output_file_name, output)
 
 
 if __name__ == '__main__':
