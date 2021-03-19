@@ -99,8 +99,8 @@ offset = 125
 
 
 def main():
-    input_file_name = ''
-    output_file_name = ''
+    input_file_name = 'input/'
+    output_file_name = 'output/'
 
     # read .tif image
     input: np.ndarray = tif.imread(input_file_name)

@@ -8,5 +8,5 @@ Samples:
 
 Channels | RGB Result
 :---:|:---|
-![channels1](readme_image_sample1.jpg) | ![channels2](result1.jpg)
-![channels1](readme_image_sample2.jpg) | ![channels2](result2.jpg)
+![channels1](readme_resources/readme_image_sample1.jpg) | ![channels2](readme_resources/readme_image_result1.jpg)
+![channels1](readme_resources/readme_image_sample2.jpg) | ![channels2](readme_resources/readme_image_result2.jpg)
