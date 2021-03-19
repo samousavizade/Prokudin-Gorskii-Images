@@ -95,12 +95,12 @@ def min_ssd(image, template, return_value=False):
     return rows, cols
 
 
-offset = 125
-
-
 def main():
+    file_name = ''
+    offset = 125
+
     # read .tif image
-    input: np.ndarray = tif.imread('melons.tif')
+    input: np.ndarray = tif.imread(file_name)
 
     m = input.max()
     # change type and intensity scale
@@ -167,29 +167,7 @@ def main():
     output[output[:, :, 2] == 0] = 0
 
     print('result saved')
-    pp.imsave('res04.jpg', output)
-
-    # plot edges and source channels
-    # fig, axs = pp.subplots(nrows=2, ncols=3)
-    # fig: pp.Figure
-    # ax1: pp.Axes
-    # ax2: pp.Axes
-    # ax3: pp.Axes
-    # fig.set_size_inches(14, 6)
-
-    # try:
-    #     axs[0, 0].imshow(red, cmap='gray', vmin=0, vmax=max_intensity)
-    #     axs[1, 0].imshow(red_edges, cmap='gray', vmin=0, vmax=max_intensity)
-    #     axs[0, 1].imshow(green, cmap='gray', vmin=0, vmax=max_intensity)
-    #     axs[1, 1].imshow(green_edges, cmap='gray', vmin=0, vmax=max_intensity)
-    #     axs[0, 2].imshow(blue, cmap='gray', vmin=0, vmax=max_intensity)
-    #     axs[1, 2].imshow(blue_edges, cmap='gray', vmin=0, vmax=max_intensity)
-    #     while not fig.waitforbuttonpress(): pass
-    # except:
-    #     print('Result Plotted')
-    #     pass
-
-    # while not fig.waitforbuttonpress(): pass
+    pp.imsave('result.png', output)
 
 
 if __name__ == '__main__':
